@@ -1,0 +1,56 @@
+name: CI
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate notebooks
+        run: |
+          python3 - <<'EOF'
+          import json
+          import pathlib
+          import sys
+
+          notebooks = sorted(pathlib.Path(".").glob("*.ipynb"))
+          if not notebooks:
+              print("no notebooks found")
+              sys.exit(1)
+          failed = False
+          for path in notebooks:
+              errors = []
+              try:
+                  nb = json.loads(path.read_text(encoding="utf-8"))
+              except json.JSONDecodeError as exc:
+                  errors.append(f"invalid JSON ({exc})")
+              else:
+                  if nb.get("nbformat") != 4:
+                      errors.append(f"nbformat is {nb.get('nbformat')}, expected 4")
+                  else:
+                      for i, cell in enumerate(nb.get("cells", [])):
+                          if cell.get("outputs"):
+                              errors.append(f"cell {i} has committed outputs")
+                          if cell.get("execution_count") is not None:
+                              errors.append(f"cell {i} has an execution count")
+              if errors:
+                  failed = True
+                  for error in errors:
+                      print(f"{path}: {error}")
+              else:
+                  print(f"{path}: OK")
+          sys.exit(1 if failed else 0)
+          EOF

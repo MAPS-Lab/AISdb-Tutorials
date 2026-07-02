@@ -1,0 +1,13 @@
+# Jupyter
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+.venv/
+.ruff_cache/
+
+# Data produced by the notebooks
+raster_data/
+
+# macOS
+.DS_Store
