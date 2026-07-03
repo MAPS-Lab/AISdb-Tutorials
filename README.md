@@ -1,6 +1,6 @@
 # Tutorials
 
-Hands-on Jupyter notebook companions to the [AISViz GitBook tutorials](https://aisviz.gitbook.io/tutorials/). Each notebook is a runnable walkthrough of one part of the [AISdb](https://github.com/AISViz/AISdb) workflow, from decoding raw AIS messages into a database through querying, cleaning, interpolation, calculations, visualization, and export. The notebooks run against a bundled sample database, so no external data downloads are needed to follow along.
+Hands-on Jupyter notebook companions to the [AISViz GitBook tutorials](https://aisviz.gitbook.io/tutorials/). Each notebook is a runnable walkthrough of one part of the [AISdb](https://github.com/MAPS-Lab/AISdb) workflow, from decoding raw AIS messages into a database through querying, cleaning, interpolation, calculations, visualization, and export. The notebooks run against a bundled sample database, so no external data downloads are needed to follow along.
 
 ## Notebooks
 
@@ -25,7 +25,7 @@ Install AISdb and Jupyter, then launch from a clone of this repository so the no
 
 ```bash
 pip install aisdb jupyter
-git clone git@github.com:AISViz/Tutorials.git
+git clone git@github.com:MAPS-Lab/AISdb-Tutorials.git
 cd Tutorials
 jupyter lab
 ```
@@ -46,9 +46,9 @@ Continuous integration validates that every notebook parses as nbformat 4 and ca
 
 ## Related projects
 
-- [AISdb](https://github.com/AISViz/AISdb), the core Python/Rust platform for storing, querying, and analyzing AIS data
-- [AISdb-lite](https://github.com/AISViz/AISdb-lite), a lightweight AISdb variant built on PostGIS and TimescaleDB hypertables
-- [NOAA-Integrator](https://github.com/AISViz/NOAA-Integrator), an acquisition pipeline from NOAA Marine Cadastre into AISdb-aligned databases
+- [AISdb](https://github.com/MAPS-Lab/AISdb), the core Python/Rust platform for storing, querying, and analyzing AIS data
+- [AISdb-lite](https://github.com/MAPS-Lab/AISdb-lite), a lightweight AISdb variant built on PostGIS and TimescaleDB hypertables
+- [NOAA-Integrator](https://github.com/MAPS-Lab/AISdb-NOAA-Integrator), an acquisition pipeline from NOAA Marine Cadastre into AISdb-aligned databases
 
 ## License
 
