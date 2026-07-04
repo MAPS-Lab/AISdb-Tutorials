@@ -48,7 +48,7 @@ Continuous integration validates that every notebook parses as nbformat 4 and ca
 
 - [AISdb](https://github.com/MAPS-Lab/AISdb), the core Python/Rust platform for storing, querying, and analyzing AIS data
 - [AISdb-lite](https://github.com/MAPS-Lab/AISdb-lite), a lightweight AISdb variant built on PostGIS and TimescaleDB hypertables
-- [NOAA-Integrator](https://github.com/MAPS-Lab/AISdb-NOAA-Integrator), an acquisition pipeline from NOAA Marine Cadastre into AISdb-aligned databases
+- [NOAA-Integrator](https://github.com/MAPS-Lab/NOAA-Integrator), an acquisition pipeline from NOAA Marine Cadastre into AISdb-aligned databases
 
 ## License
 
