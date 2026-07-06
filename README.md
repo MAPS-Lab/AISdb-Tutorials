@@ -53,6 +53,21 @@ The notebooks also run on [Google Colab](https://colab.research.google.com/). Up
 - [AISdb-lite](https://github.com/MAPS-Lab/AISdb-lite), a lightweight AISdb variant built on PostGIS and TimescaleDB hypertables
 - [NOAA-Integrator](https://github.com/MAPS-Lab/NOAA-Integrator), an acquisition pipeline from NOAA Marine Cadastre into AISdb-aligned databases
 
+## Citation
+
+If you use AISdb Tutorials in your work, please cite it. Citation metadata lives in [CITATION.cff](CITATION.cff), and the BibTeX entry follows.
+
+```bibtex
+@software{AISdbTutorials2026:GSpadon,
+  author    = {Spadon, Gabriel},
+  title     = {AISdb Tutorials},
+  year      = {2026},
+  publisher = {MAPS Lab, Dalhousie University},
+  url       = {https://github.com/MAPS-Lab/AISdb-Tutorials},
+  license   = {AGPL-3.0}
+}
+```
+
 ## License
 
 This project is distributed under the terms of the GNU Affero General Public License v3.0 (AGPL-3.0). See [LICENSE](LICENSE) for details.
