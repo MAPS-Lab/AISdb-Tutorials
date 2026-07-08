@@ -45,7 +45,7 @@ The notebooks also run on [Google Colab](https://colab.research.google.com/). Up
 
 ## Documentation
 
-[Docs](https://aisviz.gitbook.io/documentation/) · [Tutorials](https://aisviz.gitbook.io/tutorials/)
+[Docs](https://aisviz.gitbook.io/documentation/) · [Tutorials](https://aisviz.gitbook.io/tutorials/) · [API reference](https://maps-lab.github.io/AISdb/) · [Website](https://aisviz.cs.dal.ca/)
 
 ## Related projects
 
